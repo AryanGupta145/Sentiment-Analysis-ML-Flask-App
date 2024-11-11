@@ -15,16 +15,9 @@ Frontend Integration: Developed using HTML, CSS, and JavaScript in VS Code, inte
 
 Project Structure
 
+![image](https://github.com/user-attachments/assets/7397fb57-1446-4201-92e8-597fa2fdfe97)
 
-Sentiment-Analysis-ML-Flask-App/
-├── app.py                     # Main Flask app for handling requests
-├── SentimentAnalysisOnRestaurantReview.ipynb  # Jupyter notebook for model training and experimentation
-├── requirements.txt           # Dependencies required for the project
-├── model/                     # Folder containing saved models
-│   ├── hybrid
-├── static/                    # Static files (CSS, JavaScript)
-├── templates/                 # HTML templates for the web app
-└── README.md                  # Project description and instructions
+
 
 
 Usage
