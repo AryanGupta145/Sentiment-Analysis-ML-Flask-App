@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Review Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurant Review Sentiment Analysis</h1>
+        <div class="form-container">
+            <form method="POST" action="{{ url_for('home') }}" id="review-form">
+                <div class="form-group">
+                    <label for="review">Enter your review:</label>
+                    <textarea id="review" name="review" rows="4" required>{{ review if review }}</textarea>
+                </div>
+                <button type="submit">Analyze Sentiment</button>
+            </form>
+            
+            {% if sentiment %}
+            <div class="result {% if sentiment == 'Positive' %}positive{% elif sentiment == 'Negative' %}negative{% else %}neutral{% endif %}">
+                <h2>Analysis Result</h2>
+                <div class="review-display">
+                    <h3>Your Review:</h3>
+                    <p class="review-text">"{{ review }}"</p>
+                </div>
+                <div class="sentiment-display">
+                    <h3>Sentiment:</h3>
+                    <p class="sentiment-text">{{ sentiment }}</p>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
